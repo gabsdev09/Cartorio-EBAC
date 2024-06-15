@@ -95,13 +95,14 @@ int excluir() {
 	printf("Digite o cpf a ser excluído: "); //coletando informacoes cpf para excluir
 	scanf("%s", cpf); //%s se referindo a string
 
-	remove(cpf); //excluir o cpf
+	remove(cpf);
+	printf("Usuário excluído com sucesso!"); //excluir o cpf
 
 	FILE *file;  //cria o arquivo
 	file = fopen(cpf,"r"); //abre o arquivo e o "r" lê o arquivo
 
 	if(file == NULL) {
-		printf("Usuário não encontrado nos sistema! \n"); //mensagem se não achar o usuário
+		printf("Usuário não encontrado no sistema! \n"); //mensagem se não achar o usuário
 		system("pause"); //pausa no sistema
 	}
 
@@ -121,7 +122,7 @@ int main() {
 		printf("Escolha a opção que você deseja no menu:\n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Excluir nomes\n\n");
+		printf("\t3 - Excluir nomes\n");
 		printf("\t4 - Sair do sistema\n\n");
 		printf("Digite a opção desejada: "); //Fim do menu
 	
