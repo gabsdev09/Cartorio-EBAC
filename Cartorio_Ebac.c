@@ -95,14 +95,13 @@ int excluir() {
 	printf("Digite o cpf a ser excluído: "); //coletando informacoes cpf para excluir
 	scanf("%s", cpf); //%s se referindo a string
 
-	remove(cpf);
-	printf("Usuário excluído com sucesso!"); //excluir o cpf
+	remove(cpf); //excluir o cpf
 
 	FILE *file;  //cria o arquivo
 	file = fopen(cpf,"r"); //abre o arquivo e o "r" lê o arquivo
 
 	if(file == NULL) {
-		printf("Usuário não encontrado no sistema! \n"); //mensagem se não achar o usuário
+		printf("Usuário não encontrado nos sistema! \n"); //mensagem se não achar o usuário
 		system("pause"); //pausa no sistema
 	}
 
